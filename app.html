@@ -68,12 +68,12 @@
                         <form class="row gy-2 gx-3">
                                 <div class="col">
                                     <input id="startValue" type="number" class="form-control"
-                                    placeholder="Start Value" value="0" aria-label="Start Value"
+                                    placeholder="Start Value" value=0 aria-label="Start Value"
                                 </div>
 
                                 <div class="col">
                                     <input id="endValue" type="number" class="form-control"
-                                    placeholder="End Value" value="100" aria-label="End Value"
+                                    placeholder="End Value" value=100 aria-label="End Value"
                                 </div>
 
                                 <div class="col-12 mt-2 d-flex justify-content-end">
@@ -84,7 +84,7 @@
                         </form>
                         <h2 class="mt-5 border-bottom  border-2">Results</h2>
                             <div class="table-responsive">
-                                <table class="table table-stripe table-sm">
+                                <table class="table table-striped table-sm">
                                     <tbody id="results">
                                         <!---Results Go Here-->
 
@@ -129,7 +129,11 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="JS/site.js">
+    
 
+    </script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click",getValues);
     </script>
 </body>
 </html>
