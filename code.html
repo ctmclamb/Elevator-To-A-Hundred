@@ -58,93 +58,113 @@
             <div class="col-lg-8">
                 <pre class="line-numbers"><code class="language-javascript">
                     
-//Get the values from the page 
-//Start or controller function
-function getValues() {
-//Get values from the page 
-let startValue= document.getElementById("startValue").value;
-let endValue= document.getElementById("endValue").value;
+            //Get the values from the page 
+            //Start or controller function
+            function getValues() {
+            //Get values from the page 
+            let startValue= document.getElementById("startValue").value;
+            let endValue= document.getElementById("endValue").value;
 
 
 
-//We need to validate our input
-//parse into integers
-startValue = parseInt(startValue);
-endValue = parseInt(endValue);
+            //We need to validate our input
+            //parse into integers
+            startValue = parseInt(startValue);
+            endValue = parseInt(endValue);
 
-if(Number.isInteger(startValue) && Number.isInteger(endValue)) {
+            if(Number.isInteger(startValue) && Number.isInteger(endValue)) {
 
-    //We Call generateNumbers 
-   let numbers = generateNumbers(startValue, endValue);
-    //We Call displayNumbers
-    displayNumbers(numbers);
+                //We Call generateNumbers 
+            let numbers = generateNumbers(startValue, endValue);
+                //We Call displayNumbers
+                displayNumbers(numbers);
 
-} else {
-    alert("You must enter integers")
-}
-
-
-
-
-
-
-}
+            } else {
+                alert("You must enter integers")
+            }
 
 
 
 
-//Generate numbers from the start value to the end value
-//Logic function 
 
-function generateNumbers(sValue, eValue) {
 
-    let numbers = [];
+            }
 
-    //We want to get all numbers from start to end
-    // index = index +1 is the same thing as index++
-    for(let index = sValue; index <= eValue; index++){
 
-        //this will excute into a loop until index equals eValue
 
-            numbers.push(index);
-    }
 
-    return numbers;
+            //Generate numbers from the start value to the end value
+            //Logic function 
 
-}
+            function generateNumbers(sValue, eValue) {
 
-//Display the numbers and mark the even numbers in bold
-//Display or view function
+                let numbers = [];
 
-function displayNumbers(numbers){
+                //We want to get all numbers from start to end
+                // index = index +1 is the same thing as index++
+                for(let index = sValue; index <= eValue; index++){
 
-    let templateRows = "";
-    for (let index = 0; index < numbers.length; index++) {
+                    //this will excute into a loop until index equals eValue
 
-        let className = "even"
+                        numbers.push(index);
+                }
 
-        let number = numbers[index];
+                return numbers;
 
-        if(number % 2 == 0) {
+            }
 
-            className="even"
+            //Display the numbers and mark the even numbers in bold
+            //Display or view function
 
-        } else{
-            className="odd"
-        }
-        //This does render correctly with Prisim. See the source.
-        templateRows += `<tr><td class="${className}">${number}</td></tr>`;
-        
-    }
+            function displayNumbers(numbers){
 
-    document.getElementById("results").innerHTML = templateRows;
-}
+                let templateRows = "";
+                for (let index = 0; index < numbers.length; index++) {
+
+                    let className = "even"
+
+                    let number = numbers[index];
+
+                    if(number % 2 == 0) {
+
+                        className="even"
+
+                    } else{
+                        className="odd"
+                    }
+                    //This does render correctly with Prisim. See the source.
+                    templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+                    
+                }
+
+                document.getElementById("results").innerHTML = templateRows;
+            }
                 </code></pre>
+
+            
+
             </div>
-            <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+
+                <div class="col-4">
+                    <h5>The Code</h5>
+                    <p>The getValue function in the brackets has two variables that acquire the start and end numbers that are submitted from the UI.
+                        
+                    <div class="col">
+                        <p>The startValue and endValue variable use the parsnt to convert the content of the first variables into number format instead of a string.</p>
+                    </p>
+                    </div>
+
+                    <div class="col">
+                        <p>
+                            The if else statment is a condition statement that checks if both variables are numbers. If they are not both then the condition will lead to the else statement.
+                        </p>
+                    </div>
+
+
+            
+                    
+                </div> 
+                
             </div>
         </div>
     </div>
